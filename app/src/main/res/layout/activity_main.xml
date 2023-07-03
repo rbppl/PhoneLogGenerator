@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/sim_card_id"
+        android:layout_width="376dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:digits="0123456789"
+        android:ems="10"
+        android:hint="Enter sim card id"
+        android:inputType="numberDecimal"
+        android:maxLength="19"
+        android:text="XXXXXXXXXXXXXXXXXXXX"
+        app:layout_constraintTop_toBottomOf="@+id/number_of_times"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/number_of_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter number of times"
+        android:maxLength="2"
+        android:digits="0123456789"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/end_time"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter start time"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@+id/duration_edit_text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter end time"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@+id/start_time"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/call_count_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/generate_calls_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Calls"
+        app:layout_constraintBottom_toTopOf="@+id/call_count_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/number_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/call_count_text_view"
+        android:layout_centerHorizontal="true"
+        android:digits="+-() 0123456789"
+        android:ems="10"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        android:maxLength="25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/duration_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter max call duration"
+        android:inputType="number"
+        android:maxLength="4"
+        android:digits="0123456789"
+        app:layout_constraintTop_toBottomOf="@+id/number_edit_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sec"
+        app:layout_constraintBottom_toTopOf="@+id/start_time"
+        app:layout_constraintStart_toEndOf="@+id/duration_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/number_edit_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="//Example: 02/03/2023"
+        app:layout_constraintBottom_toTopOf="@+id/number_of_times"
+        app:layout_constraintTop_toTopOf="@+id/start_time"
+        tools:layout_editor_absoluteX="240dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This field is needed if you want to specify what type of SIM card the call was made to (it should consist of 19 digits that can be found in another Google app, such as &quot;sim serial number&quot;), but it is optional."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sim_card_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
